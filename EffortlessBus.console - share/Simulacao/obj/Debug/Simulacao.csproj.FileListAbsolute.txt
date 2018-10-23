@@ -1,0 +1,10 @@
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\bin\Debug\Simulacao.exe.config
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\bin\Debug\Simulacao.exe
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\bin\Debug\Simulacao.pdb
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\obj\Debug\Simulacao.csprojAssemblyReference.cache
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\obj\Debug\Simulacao.simulacao.resources
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\obj\Debug\Simulacao.Properties.Resources.resources
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\obj\Debug\Simulacao.csproj.GenerateResource.cache
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\obj\Debug\Simulacao.csproj.CoreCompileInputs.cache
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\obj\Debug\Simulacao.exe
+C:\Users\a1704176\source\repos\EffortlessBus.console\Simulacao\obj\Debug\Simulacao.pdb
