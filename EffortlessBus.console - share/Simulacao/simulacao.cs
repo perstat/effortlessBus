@@ -12,6 +12,8 @@ namespace Simulacao
 {
     public partial class simulacao : Form
     {
+        public string ponto;
+        public string destino;
         static void erro()
         {
             MessageBox.Show("Ocorreu um erro");
@@ -41,19 +43,16 @@ namespace Simulacao
         #region Destino e local iguais
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (pessoa_ponto.SelectedItem == pessoa_destino.SelectedItem)
+            ponto = pessoa_ponto.Text;
+            if (ponto == destino && ponto != null)
             {
                 linha_onibus.Enabled = false;
             }
 
-            else if (pessoa_ponto.SelectedItem != pessoa_destino.SelectedItem)
+            else if (ponto != destino)
             {
                 linha_onibus.Enabled = true;
-            }
-
-            else
-            {
-                linha_onibus.Text = (pessoa_destino.SelectedText);
+                linha_onibus.Text = (destino);
             }
 
         }
@@ -63,17 +62,17 @@ namespace Simulacao
         private void comecar_btn_Click(object sender, EventArgs e)
         {
             #region Adicionar local
-            if (pessoa_ponto.SelectedText == "Ubatuba")
+            if (ponto == "Ubatuba")
             {
                 progresso_onibus.Value = 0;
             }
 
-            else if (pessoa_ponto.SelectedText == "Caraguatatuba")
+            else if (ponto == "Caraguatatuba")
             {
                 progresso_onibus.Value = 50;
             }
 
-            else if (pessoa_ponto.SelectedText == "São Sebastião")
+            else if (ponto == "São Sebastião")
             {
                 progresso_onibus.Value = 100;
             }
@@ -85,14 +84,14 @@ namespace Simulacao
             #endregion
 
             #region Validar ponto
-            if (pessoa_ponto.SelectedText == pessoa_destino.SelectedText)
+            if (ponto == destino)
             {
                 erroMesmoLugar();
             }
             #endregion
 
             #region Começar timer
-            if  (pessoa_ponto.SelectedText == "Ubatuba" && pessoa_destino.SelectedText == "Caraguatatuba")
+            if  (ponto == "Ubatuba" && destino == "Caraguatatuba")
             {
                 while (progresso_onibus.Value < 50)
                 {
@@ -100,7 +99,7 @@ namespace Simulacao
                 }
                 timer1.Enabled = false;
             }
-            else if (pessoa_ponto.SelectedText == "Caraguatatuba" && pessoa_destino.SelectedText == "São Sebastião")
+            else if (ponto == "Caraguatatuba" && destino == "São Sebastião")
             {
                 while (progresso_onibus.Value < 100)
                 {
@@ -108,7 +107,7 @@ namespace Simulacao
                 }
                 timer1.Enabled = false;
             }
-            else if (pessoa_ponto.SelectedText == "São Sebastião" && pessoa_destino.SelectedText == "Caraguatatuba")
+            else if (ponto == "São Sebastião" && destino == "Caraguatatuba")
             {
                 while (progresso_onibus.Value > 50)
                 {
@@ -116,7 +115,7 @@ namespace Simulacao
                 }
                 timer1.Enabled = false;
             }
-            else if (pessoa_ponto.SelectedText == "Caraguatatuba" && pessoa_destino.SelectedText == "Ubatuba")
+            else if (ponto == "Caraguatatuba" && destino == "Ubatuba")
             {
                 while (progresso_onibus.Value > 50)
                 {
@@ -130,7 +129,7 @@ namespace Simulacao
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (pessoa_destino.SelectedText == "Caraguatatuba" && pessoa_ponto.SelectedText == "São Sebastião" || pessoa_destino.SelectedText == "Ubatuba" && pessoa_ponto.SelectedText == "Caraguatatuba")
+            if (destino == "Caraguatatuba" && ponto == "São Sebastião" || destino == "Ubatuba" && ponto == "Caraguatatuba")
             {
                 progresso_onibus.Value -= 10;
             }
@@ -138,6 +137,11 @@ namespace Simulacao
             {
                 progresso_onibus.Value += 10;
             }
+        }
+
+        private void pessoa_destino_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            destino = pessoa_destino.Text;
         }
     }
 }

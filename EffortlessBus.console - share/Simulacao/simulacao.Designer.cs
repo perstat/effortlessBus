@@ -131,6 +131,7 @@
             this.pessoa_destino.Name = "pessoa_destino";
             this.pessoa_destino.Size = new System.Drawing.Size(697, 21);
             this.pessoa_destino.TabIndex = 10;
+            this.pessoa_destino.SelectedIndexChanged += new System.EventHandler(this.pessoa_destino_SelectedIndexChanged);
             // 
             // label7
             // 
