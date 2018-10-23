@@ -1,0 +1,7 @@
+C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\bin\Debug\EffortlessBus.exe.config
+C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\bin\Debug\EffortlessBus.exe
+C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\bin\Debug\EffortlessBus.pdb
+C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\obj\Debug\EffortlessBus.csprojAssemblyReference.cache
+C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\obj\Debug\EffortlessBus.csproj.CoreCompileInputs.cache
+C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\obj\Debug\EffortlessBus.exe
+C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\obj\Debug\EffortlessBus.pdb

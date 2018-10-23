@@ -16,9 +16,13 @@ namespace Simulacao
         {
             MessageBox.Show("Ocorreu um erro");
         }
-        static void erro_mesmolugar()
+        static void erroMesmoLugar()
         {
             MessageBox.Show("Você ja está no seu destino");
+        }
+        static void destinoChegado()
+        {
+            MessageBox.Show("Você chegou ao seu destino!");
         }
         public simulacao()
         {
@@ -37,20 +41,19 @@ namespace Simulacao
         #region Destino e local iguais
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (pessoa_ponto.ValueMember == pessoa_destino.ValueMember)
+            if (pessoa_ponto.SelectedItem == pessoa_destino.SelectedItem)
             {
                 linha_onibus.Enabled = false;
             }
 
-            else if (pessoa_ponto.ValueMember != pessoa_destino.ValueMember)
+            else if (pessoa_ponto.SelectedItem != pessoa_destino.SelectedItem)
             {
                 linha_onibus.Enabled = true;
             }
 
             else
             {
-                // Em progresso
-                linha_onibus.Text = ();
+                linha_onibus.Text = (pessoa_destino.SelectedText);
             }
 
         }
@@ -60,34 +63,81 @@ namespace Simulacao
         private void comecar_btn_Click(object sender, EventArgs e)
         {
             #region Adicionar local
-            if (pessoa_ponto.ValueMember == "Ubatuba")
+            if (pessoa_ponto.SelectedText == "Ubatuba")
             {
-                progresso_onibus = 0 %;
+                progresso_onibus.Value = 0;
             }
 
-            else if (pessoa_ponto.ValueMember == "Caraguatatuba")
+            else if (pessoa_ponto.SelectedText == "Caraguatatuba")
             {
-                progresso_onibus = 50 %;
+                progresso_onibus.Value = 50;
             }
 
-            else if (pessoa_ponto.ValueMember == "São Sebastião")
+            else if (pessoa_ponto.SelectedText == "São Sebastião")
             {
-                progresso_onibus = 100 %;
+                progresso_onibus.Value = 100;
             }
 
             else
             {
-                erro()
+                erro();
             }
             #endregion
 
             #region Validar ponto
-            if (pessoa_ponto.ValueMember == pessoa_destino.ValueMember)
+            if (pessoa_ponto.SelectedText == pessoa_destino.SelectedText)
             {
-                erro_mesmolugar();
+                erroMesmoLugar();
+            }
+            #endregion
+
+            #region Começar timer
+            if  (pessoa_ponto.SelectedText == "Ubatuba" && pessoa_destino.SelectedText == "Caraguatatuba")
+            {
+                while (progresso_onibus.Value < 50)
+                {
+                    timer1.Enabled = true;
+                }
+                timer1.Enabled = false;
+            }
+            else if (pessoa_ponto.SelectedText == "Caraguatatuba" && pessoa_destino.SelectedText == "São Sebastião")
+            {
+                while (progresso_onibus.Value < 100)
+                {
+                    timer1.Enabled = true;
+                }
+                timer1.Enabled = false;
+            }
+            else if (pessoa_ponto.SelectedText == "São Sebastião" && pessoa_destino.SelectedText == "Caraguatatuba")
+            {
+                while (progresso_onibus.Value > 50)
+                {
+                    timer1.Enabled = true;
+                }
+                timer1.Enabled = false;
+            }
+            else if (pessoa_ponto.SelectedText == "Caraguatatuba" && pessoa_destino.SelectedText == "Ubatuba")
+            {
+                while (progresso_onibus.Value > 50)
+                {
+                    timer1.Enabled = true;
+                }
+                timer1.Enabled = false;
             }
             #endregion
         }
         #endregion
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (pessoa_destino.SelectedText == "Caraguatatuba" && pessoa_ponto.SelectedText == "São Sebastião" || pessoa_destino.SelectedText == "Ubatuba" && pessoa_ponto.SelectedText == "Caraguatatuba")
+            {
+                progresso_onibus.Value -= 10;
+            }
+            else
+            {
+                progresso_onibus.Value += 10;
+            }
+        }
     }
 }
