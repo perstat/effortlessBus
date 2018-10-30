@@ -5,23 +5,23 @@ Use horario_onibus;
 Create table trajeto (
 id int unsigned not null primary key auto_increment,
 id_onibus int not null,
-agencia varchar(50) not null,
 horarios time,
 id_gps int not null,
-linhas_id int
+linhas_id int,
+foreign key(id_onibus) references onibus(id_onibus)
 );
 
 insert into trajeto
 	(id, id_onibus, agencia, horarios, id_gps, linhas_id)
     values
-    (1, 1,'litoranea', '06:00:00', 1 , 1),
-    (2, 1,'litoranea', '06:30:00', 2 , 2),
-	(3, 2,'litoranea', '07:00:00', 3 , 1),
-    (4, 1,'litoranea', '07:30:00', 4 , 1),
-    (5, 4,'praiamar', '08:00:00', 5 , 3),
-    (6, 3,'praiamar', '08:00:00', 6 , 4),
-    (7, 3,'praiamar', '09:00:00', 7 , 5),
-    (8, 5,'praiamar', '10:00:00', 8 , 6);
+    (1, 1, '06:00:00', 1 , 1),
+    (2, 1, '06:30:00', 2 , 2),
+	(3, 2, '07:00:00', 3 , 1),
+    (4, 1, '07:30:00', 4 , 1),
+    (5, 4, '08:00:00', 5 , 3),
+    (6, 3, '08:00:00', 6 , 4),
+    (7, 3, '09:00:00', 7 , 5),
+    (8, 5, '10:00:00', 8 , 6);
 
 Create table ponto
 	( id int unsigned not null primary key auto_increment,
@@ -58,3 +58,7 @@ insert into linha
     
 SELECT * FROM onibus;
 
+Create table onibus (
+id_onibus int not null,
+agencia varchar(50) not null
+);
