@@ -15,6 +15,7 @@ insert into trajeto
 	(id, id_onibus, agencia, horarios, id_gps, linhas_id)
     values
     (1, 1, '06:00:00', 1 , 1),
+    (1, 1, '06:00:00', 1 , 1),
     (2, 1, '06:30:00', 2 , 2),
 	(3, 2, '07:00:00', 3 , 1),
     (4, 1, '07:30:00', 4 , 1),
