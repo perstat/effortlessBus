@@ -190,6 +190,7 @@
             this.Controls.Add(this.progresso_onibus);
             this.Name = "simulacao";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.simulacao_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

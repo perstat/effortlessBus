@@ -55,12 +55,6 @@ namespace Simulacao
                 linha_onibus.Text = (destino);
             }
 
-        }
-        #endregion
-
-        #region Verificações ao iniciar a simulação
-        private void comecar_btn_Click(object sender, EventArgs e)
-        {
             #region Adicionar local
             if (ponto == "Ubatuba")
             {
@@ -89,59 +83,70 @@ namespace Simulacao
                 erroMesmoLugar();
             }
             #endregion
+        }
+        #endregion
 
+        #region Verificações ao iniciar a simulação
+        private void comecar_btn_Click(object sender, EventArgs e)
+        {
             #region Começar timer
-            if  (ponto == "Ubatuba" && destino == "Caraguatatuba")
-            {
-                while (progresso_onibus.Value < 50)
-                {
-                    timer1.Enabled = true;
-                }
-                timer1.Enabled = false;
-            }
-            else if (ponto == "Caraguatatuba" && destino == "São Sebastião")
-            {
-                while (progresso_onibus.Value < 100)
-                {
-                    timer1.Enabled = true;
-                }
-                timer1.Enabled = false;
-            }
-            else if (ponto == "São Sebastião" && destino == "Caraguatatuba")
-            {
-                while (progresso_onibus.Value > 50)
-                {
-                    timer1.Enabled = true;
-                }
-                timer1.Enabled = false;
-            }
-            else if (ponto == "Caraguatatuba" && destino == "Ubatuba")
-            {
-                while (progresso_onibus.Value > 50)
-                {
-                    timer1.Enabled = true;
-                }
-                timer1.Enabled = false;
-            }
+            timer1.Enabled = true;
             #endregion
         }
         #endregion
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (destino == "Caraguatatuba" && ponto == "São Sebastião" || destino == "Ubatuba" && ponto == "Caraguatatuba")
+             if  (ponto == "Ubatuba" && destino == "Caraguatatuba")
             {
-                progresso_onibus.Value -= 10;
+                while (progresso_onibus.Value < 50)
+                {
+                    progresso_onibus.Value += 10;
+                }
+                timer1.Enabled = false;
+                destinoChegado();
             }
-            else
+            else if (ponto == "Caraguatatuba" && destino == "São Sebastião")
             {
-                progresso_onibus.Value += 10;
+                while (progresso_onibus.Value < 100)
+                {
+                    progresso_onibus.Value += 10;
+                }
+                
+                timer1.Enabled = false;
+                destinoChegado();
+            }
+            else if (ponto == "São Sebastião" && destino == "Caraguatatuba")
+            {
+                while (progresso_onibus.Value > 50)
+                {
+                    progresso_onibus.Value -= 10;
+                }
+                
+                timer1.Enabled = false;
+                destinoChegado();
+            }
+            else if (ponto == "Caraguatatuba" && destino == "Ubatuba")
+            {
+                while (progresso_onibus.Value > 50)
+                {
+                    progresso_onibus.Value -= 10;
+                }
+                
+                timer1.Enabled = false;
+                destinoChegado();
             }
         }
 
         private void pessoa_destino_SelectedIndexChanged(object sender, EventArgs e)
         {
             destino = pessoa_destino.Text;
+            linha_onibus.Text = pessoa_destino.Text;
+        }
+
+        private void simulacao_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
