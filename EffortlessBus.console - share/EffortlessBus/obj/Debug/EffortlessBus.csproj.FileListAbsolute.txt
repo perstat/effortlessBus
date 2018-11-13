@@ -5,3 +5,14 @@ C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\obj\Debug\Eff
 C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\obj\Debug\EffortlessBus.csproj.CoreCompileInputs.cache
 C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\obj\Debug\EffortlessBus.exe
 C:\Users\a1704176\source\repos\EffortlessBus.console\EffortlessBus\obj\Debug\EffortlessBus.pdb
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\bin\Debug\EffortlessBus.exe.config
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\bin\Debug\EffortlessBus.exe
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\bin\Debug\EffortlessBus.pdb
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\bin\Debug\MySql.Data.dll
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\bin\Debug\Google.Protobuf.dll
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\bin\Debug\MySql.Data.xml
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\obj\Debug\EffortlessBus.csprojAssemblyReference.cache
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\obj\Debug\EffortlessBus.csproj.CoreCompileInputs.cache
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\obj\Debug\EffortlessBus.csproj.CopyComplete
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\obj\Debug\EffortlessBus.exe
+C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\EffortlessBus\obj\Debug\EffortlessBus.pdb
