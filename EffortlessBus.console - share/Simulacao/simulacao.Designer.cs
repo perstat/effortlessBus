@@ -40,8 +40,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.linha_onibus = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.US = new System.Windows.Forms.Timer(this.components);
             this.comecar_btn = new System.Windows.Forms.Button();
+            this.UC = new System.Windows.Forms.Timer(this.components);
+            this.CU = new System.Windows.Forms.Timer(this.components);
+            this.UCpb = new System.Windows.Forms.ProgressBar();
+            this.CSpb = new System.Windows.Forms.ProgressBar();
+            this.CS = new System.Windows.Forms.Timer(this.components);
+            this.SC = new System.Windows.Forms.Timer(this.components);
+            this.SU = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +57,7 @@
             // 
             this.progresso_onibus.Location = new System.Drawing.Point(42, 413);
             this.progresso_onibus.Name = "progresso_onibus";
-            this.progresso_onibus.Size = new System.Drawing.Size(724, 32);
+            this.progresso_onibus.Size = new System.Drawing.Size(359, 32);
             this.progresso_onibus.TabIndex = 0;
             // 
             // label2
@@ -161,10 +168,10 @@
             this.linha_onibus.TabIndex = 10;
             this.linha_onibus.Text = "Aguardando informações...";
             // 
-            // timer1
+            // US
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.US.Interval = 1000;
+            this.US.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // comecar_btn
             // 
@@ -175,6 +182,45 @@
             this.comecar_btn.Text = "Começar simulação";
             this.comecar_btn.UseVisualStyleBackColor = true;
             this.comecar_btn.Click += new System.EventHandler(this.comecar_btn_Click);
+            // 
+            // UC
+            // 
+            this.UC.Interval = 1000;
+            this.UC.Tick += new System.EventHandler(this.UC_Tick);
+            // 
+            // CU
+            // 
+            this.CU.Interval = 1000;
+            this.CU.Tick += new System.EventHandler(this.CU_Tick);
+            // 
+            // UCpb
+            // 
+            this.UCpb.Location = new System.Drawing.Point(42, 413);
+            this.UCpb.Name = "UCpb";
+            this.UCpb.Size = new System.Drawing.Size(359, 32);
+            this.UCpb.TabIndex = 0;
+            // 
+            // CSpb
+            // 
+            this.CSpb.Location = new System.Drawing.Point(402, 413);
+            this.CSpb.Name = "CSpb";
+            this.CSpb.Size = new System.Drawing.Size(359, 32);
+            this.CSpb.TabIndex = 0;
+            // 
+            // CS
+            // 
+            this.CS.Interval = 1000;
+            this.CS.Tick += new System.EventHandler(this.CS_Tick);
+            // 
+            // SC
+            // 
+            this.SC.Interval = 1000;
+            this.SC.Tick += new System.EventHandler(this.SC_Tick);
+            // 
+            // SU
+            // 
+            this.SU.Interval = 1000;
+            this.SU.Tick += new System.EventHandler(this.SU_Tick);
             // 
             // simulacao
             // 
@@ -187,6 +233,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.CSpb);
+            this.Controls.Add(this.UCpb);
             this.Controls.Add(this.progresso_onibus);
             this.Name = "simulacao";
             this.Text = "Form1";
@@ -212,9 +260,16 @@
         private System.Windows.Forms.ComboBox pessoa_destino;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer US;
         private System.Windows.Forms.Button comecar_btn;
         private System.Windows.Forms.Label linha_onibus;
+        private System.Windows.Forms.Timer UC;
+        private System.Windows.Forms.Timer CU;
+        private System.Windows.Forms.ProgressBar UCpb;
+        private System.Windows.Forms.ProgressBar CSpb;
+        private System.Windows.Forms.Timer CS;
+        private System.Windows.Forms.Timer SC;
+        private System.Windows.Forms.Timer SU;
     }
 }
 

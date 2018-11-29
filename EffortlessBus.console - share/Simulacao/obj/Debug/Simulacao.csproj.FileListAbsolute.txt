@@ -22,3 +22,16 @@ C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus
 C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.csproj.CopyComplete
 C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.exe
 C:\Users\a1704061\Documents\GitHub\PIA - FortllesBus\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.pdb
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\bin\Debug\Simulacao.exe.config
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\bin\Debug\Simulacao.exe
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\bin\Debug\Simulacao.pdb
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\bin\Debug\Google.Protobuf.dll
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\bin\Debug\MySql.Data.xml
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.csprojAssemblyReference.cache
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.simulacao.resources
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.Properties.Resources.resources
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.csproj.GenerateResource.cache
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.csproj.CoreCompileInputs.cache
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.csproj.CopyComplete
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.exe
+C:\Users\a1704061\Documents\GitHub\effortlessBus\EffortlessBus.console - share\Simulacao\obj\Debug\Simulacao.pdb
