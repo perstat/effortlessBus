@@ -171,7 +171,7 @@
             // US
             // 
             this.US.Interval = 1000;
-            this.US.Tick += new System.EventHandler(this.timer1_Tick);
+            this.US.Tick += new System.EventHandler(this.US_Tick);
             // 
             // comecar_btn
             // 
