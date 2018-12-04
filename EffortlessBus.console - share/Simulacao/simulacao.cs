@@ -120,10 +120,6 @@ namespace Simulacao
             {
                 SU.Enabled = true;
             }
-
-            #region Começar timer
-            //timer1.Enabled = true;
-            #endregion
         }
         #endregion
 
@@ -135,7 +131,19 @@ namespace Simulacao
         private void pessoa_destino_SelectedIndexChanged(object sender, EventArgs e)
         {
             destino = pessoa_destino.Text;
-            linha_onibus.Text = pessoa_destino.Text;
+            if (ponto == "São Sebastião" && destino == "Ubatuba")
+            {
+                linha_onibus.Text = "Caraguatatuba / Ubatuba";
+            }
+            else if (ponto == "Ubatuba" && destino == "São Sebastião")
+            {
+                linha_onibus.Text = "Caraguatatuba / São Sebastião";
+            }
+            else
+            {
+                linha_onibus.Text = pessoa_destino.Text;
+            }
+
         }
 
         private void simulacao_Load(object sender, EventArgs e)
@@ -145,10 +153,11 @@ namespace Simulacao
 
         private void UC_Tick(object sender, EventArgs e)
         {
-            CSpb.Value += 10;
-            if (CSpb.Value == 100)
+            UCpb.Value += 10;
+            if (UCpb.Value == 100)
             {
                 UC.Enabled = false;
+                destinoChegado();
             }
         }
 
@@ -158,6 +167,7 @@ namespace Simulacao
             if (UCpb.Value == 0)
             {
                 CU.Enabled = false;
+                destinoChegado();
             }
         }
 
@@ -167,6 +177,7 @@ namespace Simulacao
             if (CSpb.Value == 100)
             {
                 CS.Enabled = false;
+                destinoChegado();
             }
 
         }
@@ -176,7 +187,8 @@ namespace Simulacao
             CSpb.Value -= 10;
             if (CSpb.Value == 0)
             {
-                CU.Enabled = false;
+                SC.Enabled = false;
+                destinoChegado();
             }
 
         }
@@ -189,10 +201,11 @@ namespace Simulacao
             }
             else
             {
+                SU.Enabled = false;
                 DialogResult dialogResult = MessageBox.Show("Para chegar ao seu destino você precisa pegar outro onibus. Você deseja fazer isso?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    CS.Enabled = true;
+                    CU.Enabled = true;
                 }
 
             }
@@ -207,11 +220,11 @@ namespace Simulacao
            }
            else
            {
-                    DialogResult dialogResult = MessageBox.Show("Para chegar ao seu destino você precisa pegar outro onibus. Você deseja fazer isso?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                US.Enabled = false;
+                DialogResult dialogResult = MessageBox.Show("Para chegar ao seu destino você precisa pegar outro onibus. Você deseja fazer isso?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
                 {
-                        CU.Enabled = true;
-                        US.Enabled = false;
+                        CS.Enabled = true;  
                 }
 
            }
